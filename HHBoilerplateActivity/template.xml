@@ -2,13 +2,13 @@
 <template
     format="4"
     revision="1"
-    name="Kotlin MVP Activity"
-    description="MVP activity constructor"
+    name="HH Boilerplate Activity"
+    description="Boilerplate activity constructor"
     minApi="14"
     minBuildApi="21"
-    category="MVP">
+    category="Boilerplate">
 
-    <category value="MVP" />
+    <category value="Boilerplate" />
 
     <parameter
         id="className"
@@ -69,7 +69,7 @@
         name="extends from Base Activity"
         type="boolean"
         default="true"
-        help="extends from your_package_name/ui/base/BaseActivity otherwise AppCompatActivity" />
+        help="extends from your_package_name/presentation/ui/base/BaseActivity otherwise AppCompatActivity" />
 
      <parameter
         id="viewName"

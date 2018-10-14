@@ -1,18 +1,17 @@
-# MVPTemplates
-File Templates for Android MVP project inspired by [Moxy Templates](https://github.com/Arello-Mobile/Moxy/tree/master/moxy-templates)
+# HH Boilerplate template
 
-Adding MVP templates to Android Studio:
+Добавление шаблона в Android Studio:
 <ul>
-	<li> Download templates
-	<li> Copy folders MVPActivity and MVPFragment to ANDROID_STUDIO_DIR/plugins/android/lib/templates/other</li>
-	<li> Restart Android Studio</li>
+	<li> Скачать шаблон
+	<li> Скопировать директорию HHBoilerplateActivity to ANDROID_STUDIO_DIR/plugins/android/lib/templates/other</li>
+	<li> Перезагрузить Android Studio</li>
   	<li> Select your package and go to File->New->MVP->MVPActivity or MVPFragment</li>
   	<li> ???</li>
   	<li> PROFIT!</li>
 </ul>
 
-![Using templates](https://raw.githubusercontent.com/yaroslavyadrov/MVPTemplates/master/images/example.png)
+![Using templates](https://raw.githubusercontent.com/artzmb/MVPTemplates/master/images/example.png)
 
-If templates disappear after Android Studio update, just add them again in the same way.
+При обновлении Android Studio, шаблон затрется, поэтому его заново придется добавлять
 
-Note that you use it at your own risk.
+Так же необходимо вручную прописать в injection/component/ActivityComponent.kt требуемую активити.
