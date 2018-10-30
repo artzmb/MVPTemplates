@@ -12,13 +12,9 @@ import javax.inject.Inject
 </#if>
 
 <#if extendsBaseActivity>
-class ${className} : <#if !includeView>BaseActivity() {</#if>
-    <#if includeView>BaseActivity(),
-		${viewName} {</#if>
+class ${className} : <#if !includeView>BaseActivity() {</#if><#if includeView>BaseActivity(), ${viewName} {</#if>
 <#else>
-class ${className} : <#if !includeView>AppCompatActivity() {</#if>
-    <#if includeView>AppCompatActivity(),
-		${viewName} {</#if>
+class ${className} : <#if !includeView>AppCompatActivity() {</#if><#if includeView>AppCompatActivity(), ${viewName}{</#if>
 </#if>
 
 	<#if includePresenter>
@@ -35,10 +31,13 @@ class ${className} : <#if !includeView>AppCompatActivity() {</#if>
 		</#if>
 		<#if includePresenter>
 		presenter.attachView(this)
-        presenter.onViewCreated()
 		</#if>
 
 		setupLayout()
+
+		<#if includePresenter>
+		presenter.onViewCreated()
+		</#if>
 	}
 
 	<#if includePresenter>
